@@ -11,15 +11,11 @@ A collection of React and JavaScript coding challenges commonly asked in fronten
 
 ## Topics
 
-- Counter
+- Counter with Step
 - Employee Search
 - Todo App
 - Accordion
-- Pagination
-- Infinite Scroll
-- Debouncing
-- Custom Hooks
-- JavaScript Algorithms
+- Group By City
 
 ## Progress
 
