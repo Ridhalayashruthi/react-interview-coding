@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import CounterWithStep from "./problems/01-counter-with-step/CounterWithStep";
+import EmployeeSearch from "./problems/02-employee-search/EmployeeSearch";
 import TodoApp from "./problems/03-todo-app/TodoApp";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
       <section className="question-card">
         <h2>Question 2</h2>
         <h3>Employee Search</h3>
-        <p>Coming Soon...</p>
+        <EmployeeSearch />
       </section>
 
       <section className="question-card">

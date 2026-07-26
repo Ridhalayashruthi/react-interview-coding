@@ -1,71 +1,37 @@
-
 import React from 'react';
 import './EmployeeSearch.css';
 
-export default function App() {
-    const [task, setTask] = React.useState('');
-    const [desc, setDesc] = React.useState('');
-    const [dueDate, setDueDate] = React.useState('');
-    const [list, setList] = React.useState([]);
-  
-    const handleAdd = () => {
-      if (!task.trim() || !desc.trim() || !dueDate.trim()) {
-        return;
-      }
-      const listItem = {
-        id: Date.now(),
-        task,
-        desc,
-        dueDate
-      };
-      setList((prev) => [...prev, listItem]);
-      setTask('');
-      setDesc('');
-      setDueDate('');
-    };
-  
-    const handleDelete = (id) => {
-      setList(prev => prev.filter(item => item.id !== id));
-    }
-  
-    return (
-      <div>
-        <h3>TODO</h3>
-        <input
-          placeholder="Task Name"
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
-        />
-        <br />
-        <br />
-        <br />
-        <input
-          placeholder="Task Description"
-          value={desc}
-          onChange={(e) => setDesc(e.target.value)}
-        />
-        <br />
-        <br />
-        <br />
-        <input
-          type="date"
-          value={dueDate}
-          onChange={(e) => setDueDate(e.target.value)}
-        />
-        <br />
-        <br />
-        <br />
-        <button onClick={handleAdd}>Add</button>
-        <br />
-        <br />
-        <br />
+const employees = [
+  { id: 1, name: 'John Doe' },
+  { id: 2, name: 'Jane Smith' },
+  { id: 3, name: 'Alice Johnson' },
+  { id: 4, name: 'Bob Brown' },
+  { id: 5, name: 'Charlie Davis' },
+];
+
+export default function EmployeeSearch() {
+  const [search, setSearch] = React.useState('');
+
+  const filteredList = employees.filter((employee) =>
+    employee.name.toLowerCase().includes(search.toLowerCase())
+  );
+  return (
+    <div className='container'>
+      <input
+        type='search'
+        placeholder='Search'
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      {filteredList.length === 0 ? (
+        <p>No Employees found</p>
+      ) : (
         <ul>
-          {list.map((item) => (
-              <li key={item.id}>
-                {item.task} - {item.desc} - {item.dueDate} &nbsp; <button onClick={()=> handleDelete(item.id)}>Delete</button>
-              </li>
-            ))}
+          {filteredList.map((employee) => (
+            <li key={employee.id}>{employee.name}</li>
+          ))}
         </ul>
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
+}

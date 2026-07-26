@@ -1,7 +1,7 @@
 import React from 'react';
 import './CounterWithStep.css';
 
-export default function App() {
+export default function CounterWithStep() {
   const [count, setCount] = React.useState(0);
   const [step, setStep] = React.useState(1);
 

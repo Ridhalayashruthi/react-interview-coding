@@ -2,7 +2,7 @@
 import React from 'react';
 import './TodoApp.css';
 
-export default function App() {
+export default function TodoApp() {
     const [task, setTask] = React.useState('');
     const [desc, setDesc] = React.useState('');
     const [dueDate, setDueDate] = React.useState('');
