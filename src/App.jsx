@@ -1,6 +1,6 @@
 import CounterWithStep from "./problems/01-counter-with-step/CounterWithStep";
-// import EmployeeSearch from "./problems/02-employee-search/EmployeeSearch";
-// import TodoApp from "./problems/03-todo-app/TodoApp";
+import EmployeeSearch from "./problems/02-employee-search/EmployeeSearch";
+import TodoApp from "./problems/03-todo-app/TodoApp";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
 
       <hr />
 
-      {/* <section>
+      <section>
         <h2>2. Employee Search</h2>
         <EmployeeSearch />
       </section>
@@ -24,7 +24,7 @@ function App() {
       <section>
         <h2>3. Todo App</h2>
         <TodoApp />
-      </section> */}
+      </section>
     </div>
   );
 }
