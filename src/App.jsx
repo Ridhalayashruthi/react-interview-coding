@@ -1,31 +1,35 @@
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 import CounterWithStep from "./problems/01-counter-with-step/CounterWithStep";
-import EmployeeSearch from "./problems/02-employee-search/EmployeeSearch";
 import TodoApp from "./problems/03-todo-app/TodoApp";
 
 function App() {
   return (
-    <div className="container">
-      <h1>React Interview Coding</h1>
+    <>
+      <Header />
 
-      <section>
-        <h2>1. Counter with Step</h2>
+      <section  className="question-card">
+        <h2>Question 1</h2>
+        <h3>Counter with Step</h3>
         <CounterWithStep />
       </section>
 
-      <hr />
-
-      <section>
-        <h2>2. Employee Search</h2>
-        <EmployeeSearch />
+      <section className="question-card">
+        <h2>Question 2</h2>
+        <h3>Employee Search</h3>
+        <p>Coming Soon...</p>
       </section>
 
-      <hr />
-
-      <section>
-        <h2>3. Todo App</h2>
+      <section className="question-card">
+        <h2>Question 3</h2>
+        <h3>Todo App</h3>
         <TodoApp />
       </section>
-    </div>
+
+      <Footer />
+    </>
   );
 }
 

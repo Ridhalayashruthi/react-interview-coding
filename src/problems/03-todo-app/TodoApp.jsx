@@ -29,36 +29,36 @@ export default function App() {
     }
   
     return (
-      <div>
+      <div className='container'>
         <h3>TODO</h3>
         <input
           placeholder="Task Name"
           value={task}
           onChange={(e) => setTask(e.target.value)}
         />
-        <br />
-        <br />
-        <br />
+       &nbsp;
+       &nbsp;
+       &nbsp;
         <input
           placeholder="Task Description"
           value={desc}
           onChange={(e) => setDesc(e.target.value)}
         />
-        <br />
-        <br />
-        <br />
+       &nbsp;
+       &nbsp;
+       &nbsp;
         <input
           type="date"
           value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
         />
-        <br />
-        <br />
-        <br />
+       &nbsp;
+       &nbsp;
+       &nbsp;
         <button onClick={handleAdd}>Add</button>
-        <br />
-        <br />
-        <br />
+       &nbsp;
+       &nbsp;
+       &nbsp;
         <ul>
           {list.map((item) => (
               <li key={item.id}>
