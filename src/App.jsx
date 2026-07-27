@@ -7,6 +7,7 @@ import EmployeeSearch from './problems/02-employee-search/EmployeeSearch';
 import TodoApp from './problems/03-todo-app/TodoApp';
 import Accordion from './problems/04-accordion/Accordion';
 import Tabs from './problems/12-tabs/Tabs';
+import CustomModal from './problems/09-custom-modal/CustomModal';
 
 function App() {
   return (
@@ -42,6 +43,14 @@ function App() {
         <h3>Tabs</h3>
         <Tabs />
       </section>
+
+      <section className='question-card'>
+        <h2>Question 9</h2>
+        <h3>Custom Modal</h3>
+        <CustomModal />
+      </section>
+
+
       <Footer />
     </>
   );
